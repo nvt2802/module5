@@ -1,0 +1,104 @@
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    width: 90%;
+  }
+  
+  th {
+    background-color: lightgray;
+    color: black;
+  }
+  th, td {
+    padding: 10px;
+    border: 2px solid black;
+  }
+  tr{
+    background-color: #f2f2f2;
+  }
+  /* required css to make rounded table (below) */
+  tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+  }
+  tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+  }
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+  h1{
+    text-align: center;
+  }
+
+  .pagination-outer{ text-align: center; }
+.pagination{
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    position: relative;
+}
+.pagination li a.page-link{
+    color: #555;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    height: 35px;
+    width: 35px;
+    padding: 0;
+    margin: 0 8px;
+    border-radius: 0;
+    border: 2px solid #555;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease 0s;
+}
+.pagination li:first-child a.page-link,
+.pagination li:last-child a.page-link{
+    font-size: 35px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus,
+.pagination li.active a.page-link:hover,
+.pagination li.active a.page-link{
+    color: #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: transparent;
+    box-shadow: 0 0 0 3px black,0 0 10px rgba(0,0,0,0.5);
+}
+.pagination li a.page-link:before{
+    content: '';
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.4s ease 0s;
+}
+.pagination li a.page-link:hover:before,
+.pagination li a.page-link:focus:before,
+.pagination li.active a.page-link:hover:before,
+.pagination li.active a.page-link:before{
+    opacity: 1;
+    transform: scaleX(0.65);
+}
+@media only screen and (max-width: 480px){
+    .pagination{
+        font-size: 0;
+        display: inline-block;
+    }
+    .pagination li{
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px 0;
+    }
+}
