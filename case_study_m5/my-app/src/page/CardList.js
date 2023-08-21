@@ -5,7 +5,7 @@ export default function CardList() {
     return (
         <div >
             <div className='container my-5'>
-                <div className='row '>
+                <div className='row ' >
                     <div className="col-3 col-md-3">
                         <div className="card shadow">
                             <img src="https://images.trvl-media.com/lodging/49000000/48870000/48869100/48869049/7eff3798.jpg?impolicy=resizecrop&rw=500&ra=fit" className="card-img-top rounded-top" alt="Themesberg office" />
@@ -64,6 +64,23 @@ export default function CardList() {
                     </div>
                 </div>
             </div>
+            <div className="container d-flex justify-content-center">
+    <nav aria-label="...">
+  <ul className="pagination">
+    <li className="page-item disabled">
+      <a className="page-link" href="/#" tabindex="-1">&laquo;</a>
+    </li>
+    <li className="page-item"><a className="page-link" href="/#">1</a></li>
+    <li className="page-item active">
+      <a className="page-link" href="/#">2 <span className="sr-only"></span></a>
+    </li>
+    <li className="page-item"><a className="page-link" href="/#">3</a></li>
+    <li className="page-item">
+      <a className="page-link" href="/#">&raquo;</a>
+    </li>
+  </ul>
+</nav>
+</div>
         </div>
     )
 }

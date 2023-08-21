@@ -1,6 +1,6 @@
 import React from 'react'
-import './style_layout.css';
-import "bootstrap/dist/css/bootstrap.css";
+import './style_layout.css'
+import "bootstrap/dist/css/bootstrap.css"
 
 
 export default function Navbar() {

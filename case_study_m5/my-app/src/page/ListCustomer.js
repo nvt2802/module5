@@ -18,6 +18,7 @@ export default function ListCustomer() {
                 <th>Phone number</th>
                 <th>Type</th>
                 <th>Address</th>
+                <th>Action</th>
             </tr>
             <tr>
                 <td>1</td>
@@ -28,6 +29,8 @@ export default function ListCustomer() {
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
+                <td><button className='btn btn-primary'>Edit</button><button className='btn btn-danger'>Delete</button></td>
+         
             </tr>
             <tr>
                 <td>1</td>
@@ -38,8 +41,9 @@ export default function ListCustomer() {
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
-            </tr>
-            <tr>
+                <td><button className='btn btn-primary'>Edit</button><button className='btn btn-danger'>Delete</button></td>
+         
+            </tr> <tr>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
@@ -48,8 +52,9 @@ export default function ListCustomer() {
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
-            </tr>
-            <tr>
+                <td><button className='btn btn-primary'>Edit</button><button className='btn btn-danger'>Delete</button></td>
+         
+            </tr> <tr>
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
@@ -58,28 +63,28 @@ export default function ListCustomer() {
                 <td>1</td>
                 <td>1</td>
                 <td>1</td>
+                <td><button className='btn btn-primary'>Edit</button><button className='btn btn-danger'>Delete</button></td>
+         
             </tr>
         </table>
 
     </div>
-    <div className="demo container d-flex justify-content-center">
-    <nav className="pagination-outer" aria-label="Page navigation">
-        <ul className="pagination">
-            <li className="page-item">
-                <a href="/#" className="page-link" aria-label="Previous">
-                    <span aria-hidden="true">«</span>
-                </a>
-            </li>
-            <li className="page-item"><a className="page-link" href="/#">1</a></li>
-            <li className="page-item active"><a className="page-link" href="/#">2</a></li>
-            <li className="page-item"><a className="page-link" href="/#">3</a></li>
-            <li className="page-item">
-                <a href="/#" className="page-link" aria-label="Next">
-                    <span aria-hidden="true">»</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <div className="container d-flex justify-content-center">
+    <nav aria-label="...">
+  <ul className="pagination">
+    <li className="page-item disabled">
+      <a className="page-link" href="/#" tabindex="-1">&laquo;</a>
+    </li>
+    <li className="page-item"><a className="page-link" href="/#">1</a></li>
+    <li className="page-item active">
+      <a className="page-link" href="/#">2 <span className="sr-only"></span></a>
+    </li>
+    <li className="page-item"><a className="page-link" href="/#">3</a></li>
+    <li className="page-item">
+      <a className="page-link" href="/#">&raquo;</a>
+    </li>
+  </ul>
+</nav>
 </div>
     </div>
   )

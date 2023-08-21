@@ -6,7 +6,7 @@ export default function edit() {
   return (
     <div className='d-flex justify-content-center'>
         
-        <div id='form-input-info'>
+        <div id='form-input-info-service' className='shadow'>
           <h3>Edit service</h3>
         <div className="form-outline mb-4">
     <label className="form-label" htmlFor="form5Example1">Name</label>
