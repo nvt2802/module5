@@ -26,12 +26,12 @@ let courses = [
     }, 
   ];
 
-let s = courses.filter((Element) => Element.rating >=4)
-console.log(s);
+let coursesGreaterThan4 = courses.filter((Element) => Element.rating >=4)
+console.log(coursesGreaterThan4);
 
-let filteredCourses = courses.filter((item) => item.rating < 4);
+// let filteredCourses = courses.filter((item) => item.rating < 4);
 
-let formattedCourses = filteredCourses.map((item) => item.id +"-"+item.title+"-"+item.rating);
+let formattedCourses = courses.filter((item) => item.rating < 4).map((item) => item.id +"-"+item.title+"-"+item.rating);
 
 console.log(formattedCourses);
 
@@ -53,6 +53,5 @@ let addedCourses = [
     } 
   ]; 
 
-let myCourse = [...courses,...addedCourses];
-console.log(myCourse);
-  
+  const mergeCourses = (courses, addedCourses) => [...courses, ...addedCourses];
+  console.log(mergeCourses(courses, addedCourses));
