@@ -6,7 +6,7 @@ export default function AddCustomer() {
     return (
         <div className='d-flex justify-content-center'>
             {/* : Họ tên, Ngày sinh, Giới tính, Số CMND, Số Điện Thoại, Email, Loại khách, Địa chỉ  */}
-            <div id='form-input-info' className='shadow'>
+            <div id='form-input-info-customer' className='shadow'>
 
                 <h3>Create customer</h3>
                 <div className='row d-flex'>

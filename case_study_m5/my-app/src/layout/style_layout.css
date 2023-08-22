@@ -1,6 +1,21 @@
-.form-radius-20{
+.form-radius{
     border-radius: 20px;
 }   
 a{
   text-decoration: none;
+}
+a:hover {
+  font-weight: bold;
+}
+#nav-page {
+  background-color: white;
+}
+#footer-page{
+  background-color: white;
+}
+#inputSearch {
+  background-color: white;
+}
+#inputFooter{
+  background-color: white;
 }

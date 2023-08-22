@@ -1,12 +1,11 @@
 import React from 'react'
-import './style_layout.css'
 import "bootstrap/dist/css/bootstrap.css"
-
+import './style_layout.css';
 
 export default function Navbar() {
   return (
     <div>
-    <nav className="navbar navbar-expand-lg bg-white bg-body-tertiary shadow-sm">
+    <nav className="navbar navbar-expand-lg shadow-sm" id="nav-page">
     <div className="container-fluid">
         <a className="navbar-brand text-dark" href="/#">Furama Resort</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -40,9 +39,9 @@ export default function Navbar() {
                 </li>
             </ul>
             <form className="d-flex" role="search">
-                <input className="form-control me-2 border-dark border-2 form-radius-20" id="inputSearch" type="search"
+                <input className="form-control me-2 border-dark border-2 form-radius" id="inputSearch" type="search"
                        placeholder="Search" aria-label="Search"/>
-                <button className="btn btn-outline-dark border-2 form-radius-20" id="btnSearch" type="submit">Search</button>
+                <button className="btn btn-outline-dark border-2 form-radius" id="btnSearch" type="submit">Search</button>
             </form>
         </div>
     </div>

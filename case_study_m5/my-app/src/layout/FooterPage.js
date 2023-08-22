@@ -1,12 +1,12 @@
 import React from 'react'
-import './style_layout.css';
 import "bootstrap/dist/css/bootstrap.css";
-
+import './style_layout.css';
+ 
 export default function FooterPaGE() {
   return (
     <div>
-    <footer className="shadow">
-    <div className="container-fluid bg-white text-dark mt-5 pt-5">
+    <footer className="shadow-lg">
+    <div className="container-fluid text-dark mt-5 pt-5" id="footer-page">
         <div className="row px-xl-5 pt-5">
             <div className="col-lg-3 col-md-12 mb-5 pr-3 pr-xl-5">
                 <h5 className=" text-uppercase mb-4">Furara Resort</h5>
@@ -45,24 +45,24 @@ export default function FooterPaGE() {
                         <h5 className=" text-uppercase mb-4">JOIN OUR NEWSLETTER</h5>
                         <form action="">
                             <div className="input-group">
-                                <input className="form-control me-2 border-dark border-2 form-radius-20"
-                                       type="search" placeholder="Email" aria-label="Search"/>
-                                <button className="btn btn-outline-dark border-2 form-radius-20"  type="submit">
+                                <input className="form-control me-2 border-dark border-2 form-radius"
+                                       type="search" id="inputFooter" placeholder="Email" aria-label="Search"/>
+                                <button className="btn btn-outline-dark border-2 form-radius"  type="submit">
                                     Sign in
                                 </button>
                             </div>
                         </form>
                         <h6 className=" text-uppercase mt-4 mb-3">Follow us</h6>
                         <div className="d-flex">
-                            <a className="btn btn-outline-dark btn-square mr-2 mx-1 border-dark border-2 form-radius-20"
+                            <a className="btn btn-outline-dark btn-square mr-2 mx-1 border-dark border-2 form-radius"
                                 href="/#"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-outline-dark btn-square mr-2 mx-1 border-dark border-2 form-radius-20"
+                            <a className="btn btn-outline-dark btn-square mr-2 mx-1 border-dark border-2 form-radius"
                                href="/#"><i
                                     className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-outline-dark btn-square mr-2 mx-1 border-dark border-2 form-radius-20"
+                            <a className="btn btn-outline-dark btn-square mr-2 mx-1 border-dark border-2 form-radius"
                                href="/#"><i
                                     className="fab fa-linkedin-in"></i></a>
-                            <a className="btn btn-outline-dark btn-square mx-1 border-dark border-2 form-radius-20 "
+                            <a className="btn btn-outline-dark btn-square mx-1 border-dark border-2 form-radius "
                                href="/#"><i className="fab fa-instagram"></i></a>
                         </div>
                     </div>

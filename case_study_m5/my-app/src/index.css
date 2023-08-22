@@ -3,6 +3,8 @@ body {
   font-family: cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #f4e9e3; */
+  /* background-color: darkblue; */
 }
 
 * {

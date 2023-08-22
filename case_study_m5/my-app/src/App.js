@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import Navbar from './layout/Navbar';
 import Footer from './layout/FooterPage';
 import ListCustomer from './page/ListCustomer';
@@ -15,12 +15,11 @@ import Home from './home/HomePage';
 
 function App() {
   return (
-    <div >
+    <div id="main">
       <Router>
       <Navbar/>
       <Routes >
         <Route path="/" element={ <Home />}/>
-     
         <Route path="/edit-service" element={<EditForm />}/>
         <Route path="/add-service" element={<AddForm />}/>
         <Route path="/customer" element={<ListCustomer />}/>
