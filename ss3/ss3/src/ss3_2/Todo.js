@@ -17,11 +17,13 @@ class Todo extends Component {
     }
 
     handleAddItem = () => {
-        if(this.state.item!==""){
-        this.setState({
-            list: [...this.state.list, this.state.item],
-            item: ""
-        })}
+        if(this.state.item.trim()!==""){
+        this.setState((prev) => ({
+            list: [...prev.list, prev.item],
+            item: "",
+        }))
+    }
+
     }
     render() {
         return (

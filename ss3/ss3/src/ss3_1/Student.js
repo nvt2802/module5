@@ -53,13 +53,13 @@ class StudentInfoComponent extends Component {
                         <th>age</th>
                         <th>address</th>
                     </tr>
-                    {this.state.listStudent.map((Element,index) => {
+                    {this.state.listStudent.map((element,index) => {
 
-                        return <tr>
-                            <td key={index}>{Element.id}</td>
-                            <td key={index}>{Element.name}</td>
-                            <td key={index}>{Element.age}</td>
-                            <td key={index}>{Element.address}</td>
+                        return <tr key={index}>
+                            <td >{element.id}</td>
+                            <td >{element.name}</td>
+                            <td >{element.age}</td>
+                            <td >{element.address}</td>
                         </tr>
 
                     })}
