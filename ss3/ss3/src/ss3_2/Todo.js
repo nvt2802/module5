@@ -35,8 +35,8 @@ class Todo extends Component {
                 <h1>Todo</h1>
                 <ul>
                     {
-                        this.state.list.map((item) => {
-                            return <li>{item}</li>
+                        this.state.list.map((item,index) => {
+                            return <li key={index}>{item}</li>
                         })
                     }
                 </ul>
