@@ -2,11 +2,12 @@ import React from 'react'
 import {ErrorMessage, Field, Form, Formik} from 'formik'
 import axios from 'axios'
 import * as Yup from 'yup'
+import { createTodo } from './TodoService'
 
 export default function CreateTodo() {
     const addTodo = async (values) =>{
-       const result = await axios.post('https://jsonplaceholder.typicode.com/todos',values);
-       console.log(result);
+       const result = await createTodo();
+         console.log(result);
        alert(result.status)
     }
   return (

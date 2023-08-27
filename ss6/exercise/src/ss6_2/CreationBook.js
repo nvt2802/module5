@@ -1,17 +1,18 @@
-import axios from 'axios'
+
 import { Field, Form, Formik } from 'formik';
 import {  useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
+import { createBook } from './BookService';
 
 export default function CreateBook() {
     const navigate = useNavigate();
     const addBook = async (values) => {
-        const result = await axios.post(`https://my-json-server.typicode.com/codegym-vn/mock-api-books/books`, values);
+        const result = await createBook();
         console.log(result);
         navigate("/");
     }
     return (
-
+        <div className='container'>
         <Formik
             initialValues={{
                 title: "",
@@ -30,12 +31,12 @@ export default function CreateBook() {
         >
             <Form>
                 <label htmlFor='Title'>Title</label>
-                <Field type='text' id='Title' name='title' />
+                <Field className='form-control my-2' type='text' id='Title' name='title' />
                 <label htmlFor='Quantity'>Quantity</label>
-                <Field type='number' id='Quantity' name='quantity' />
-                <button type='submit'>Create</button>
+                <Field className='form-control my-2' type='number' id='Quantity' name='quantity' />
+                <button className="btn btn-primary" type='submit'>Create</button>
             </Form>
         </Formik>
-
+        </div>
     )
 }

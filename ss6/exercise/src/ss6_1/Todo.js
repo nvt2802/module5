@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { getTodo } from './TodoService';
 
 export default function Todo() {
     const [todo,setTodo]= useState([]);
@@ -9,7 +10,7 @@ export default function Todo() {
     },[])
 
     const getAll = async () => {
-        const result = await axios.get('https://jsonplaceholder.typicode.com/todos?userId=1')
+        const result = await getTodo();
         setTodo((prev)=>result.data)
     }
   return (
