@@ -12,16 +12,16 @@ export default function EditBook() {
     const [book,setBook] = useState()
 
     useEffect(()=>{
-        loadBook(params);
+        loadBook(params.id);
     },[params])
 
-    const loadBook = async (params) =>{
-      const result = await bookDetail(params.id);
+    const loadBook = async (id) =>{
+      const result = await bookDetail(id);
       setBook((pre) => result.data);
     }
 
     const update = async (values) =>{
-        const result = await updateBook(params.id,values);
+        const result = await updateBook(values);
        console.log(result)
         navigate("/");
     }
