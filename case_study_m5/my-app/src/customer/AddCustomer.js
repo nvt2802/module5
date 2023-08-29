@@ -1,9 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.css";
 import './style_customer.css'
+import {ErrorMessage, Field, Form, Formik} from 'formik';
+import * as Yup from 'yup';
+import { Link, useNavigate } from 'react-router-dom';
+import { createCustomer, getAllCustomerType } from './CustomerService';
 
 export default function AddCustomer() {
+    const navigate = useNavigate();
+    const [customerTypes,setCustomerTypes]=useState([]);
+    useEffect(()=>{
+        getAllCustomerTypes();
+    },[]);
+
+    const getAllCustomerTypes = async() =>{
+        const tmpCustomerTypes = await getAllCustomerType();
+        setCustomerTypes((prev)=>tmpCustomerTypes);
+    }
     return (
+        <Formik
+        initialValues={{
+            name : "",
+            dob : "",
+            gender : "0",
+            idno : "",
+            phone_number :"",
+            email : "",
+            type : {},
+            address : "",
+        }}
+        validationSchema={Yup.object({
+            name: Yup.string().required("Please input name"),
+            dob: Yup.string().required("Please input date of birth"),
+            gender: Yup.string().required("Please input gender"),
+            idno: Yup.string().required("Please input ID No"),
+            phone_number: Yup.string().required("Please input phone number"),
+            email: Yup.string().required("Please input email"),
+            type: Yup.string().required("Please input type"),
+            address: Yup.string().required("Please input address")
+        })}
+        onSubmit={ async(value) => {
+            await createCustomer(value);
+            navigate("/customer");
+        }}
+        >
+            <Form>
         <div className='d-flex justify-content-center'>
             {/* : Họ tên, Ngày sinh, Giới tính, Số CMND, Số Điện Thoại, Email, Loại khách, Địa chỉ  */}
             <div id='form-input-info-customer' className='shadow'>
@@ -13,60 +54,72 @@ export default function AddCustomer() {
                     <div className='col-6'>
                         <div className="form-outline mb-4">
                             <label className="form-label" htmlFor="form5Example1">Full name</label>
-                            <input type="text" id="form5Example1" className="form-control" />
+                            <Field type="text" id="form5Example1" className="form-control" name='name'/>
+                            <ErrorMessage name="name" style={{color:"red"}} component='small' className="form-error" />
                         </div>
                         <div className="form-outline mb-4">
-                            <label>Gender</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Gender</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                            </select>
+                            <label>Gender</label><br/>
+                            <div className="form-check form-check-inline">
+                                <Field className="form-check-input" type="radio" id="inlineRadio1"
+                                    value="1" name="gender" />
+                                <label className="form-check-label" htmlFor="inlineRadio1">Male</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <Field name="gender" className="form-check-input" type="radio" id="inlineRadio2"
+                                    value="0" />
+                                <label className="form-check-label" htmlFor="inlineRadio2">Female</label>
+                            </div>
+                            <ErrorMessage name="gender" style={{color:"red"}} component='small' className="form-error" />
                         </div>
                         <div className="form-outline mb-4">
-                            <label className="form-label" htmlFor="form5Example2">Date of birth</label>
-                            <input type="date" id="form5Example2" className="form-control" />
+                            <label  className="form-label" htmlFor="form5Example2">Date of birth</label>
+                            <Field name="dob" type="date" id="form5Example2" className="form-control" />
+                            <ErrorMessage name="dob" style={{color:"red"}} component='small' className="form-error" />
                         </div>
                         <div className="form-outline mb-4">
                             <label className="form-label" htmlFor="form5Example3">ID No</label>
-                            <input type="text" id="form5Example3" className="form-control" />
+                            <Field name='idno' type="text" id="form5Example3" className="form-control" />
+                            <ErrorMessage name="idno"  style={{color:"red"}} component='small' className="form-error" />
                         </div>
 
                     </div>
                     <div className='col-6'>
                         <div className="form-outline mb-4">
                             <label className="form-label" htmlFor="form5Example3">Phone number</label>
-                            <input type="text" id="form5Example3" className="form-control" />
+                            <Field name='phone_number' type="text" id="form5Example3" className="form-control" />
+                            <ErrorMessage name="phone_number" style={{color:"red"}} component='small' className="form-error" />
                         </div>
                         <div className="form-outline mb-4">
                             <label className="form-label" htmlFor="form5Example3">Email</label>
-                            <input type="text" id="form5Example3" className="form-control" />
+                            <Field name='email' type="text" id="form5Example3" className="form-control" />
+                            <ErrorMessage name="email"  style={{color:"red"}} component='small' className="form-error" />
                         </div>
                         <div className="form-outline mb-4">
                             <label>Type customer</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Type</option>
-                                <option value="1">Member</option>
-                                <option value="2">Silver</option>
-                                <option value="3">Gold</option>
-                                <option value="4">Platinum</option>
-                                <option value="4">Diamon</option>
-                            </select>
+                            <Field as="select" name='type' class="form-select" aria-label="Default select example">
+                                {
+                                    customerTypes.map((customerType)=>{
+                                      return <option value={customerType.id}>{customerType.name}</option>
+                                    })
+                                }
+                            </Field>
                         </div>
                         <div className="form-outline mb-4">
                             <label className="form-label" htmlFor="form5Example3">Address</label>
-                            <input type="text" id="form5Example3" className="form-control" />
+                            <Field name='address' type="text" id="form5Example3" className="form-control" />
+                            <ErrorMessage name="address" style={{color:"red"}} component='small' className="form-error" />
                         </div>
                     </div>
                 </div>
                 <div className='d-flex justify-content-center'>
                     <button type="submit" className="btn btn-primary btn-block mb-4 mx-2">Add</button>
-                    <button type="submit" className="btn btn-danger btn-block mb-4 mx-2">Cancel</button>
+                    <Link to={'/customer'} className="btn btn-danger btn-block mb-4 mx-2">Cancel</Link>
                 </div>
 
             </div>
         </div>
-
+        </Form>
+        </Formik>
 
     )
 }

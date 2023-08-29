@@ -1,0 +1,180 @@
+{
+  "customer-types": [
+    {
+      "id": "1",
+      "name": "Member"
+    },
+    {
+      "id": "2",
+      "name": "Silver"
+    },
+    {
+      "id": "3",
+      "name": "Gold"
+    },
+    {
+      "id": "4",
+      "name": "Platinum"
+    },
+    {
+      "id": "5",
+      "name": "Diamond"
+    }
+  ],
+  "custommers": [
+    {
+      "id": 1,
+      "name": "Nguyen Van A",
+      "dob": "2002-02-02",
+      "gender": 1,
+      "idno": "123456789012",
+      "phone_number": "0899202891",
+      "email": "nvt280202@gmail.com",
+      "type": {
+        "id": "1",
+        "name": "Gold"
+      },
+      "address": "123 Nguyen Van Linh , Da nang"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Van A",
+      "dob": "2002-02-02",
+      "gender": 1,
+      "idno": "11",
+      "phone_number": "0899202891",
+      "email": "nvt280202@gmail.com",
+      "type": {
+        "id": "1",
+        "name": "Gold"
+      },
+      "address": "123 Nguyen Van Linh , Da nang"
+    },
+    {
+      "id": 8,
+      "name": "1",
+      "dob": "2023-08-02",
+      "gender": "1",
+      "idno": "1",
+      "phone_number": "1",
+      "email": "1",
+      "type": {
+        "id": "2",
+        "name": "Silver"
+      },
+      "address": "1"
+    },
+    {
+      "name": "nguyen thi e",
+      "dob": "2023-08-03",
+      "gender": "1",
+      "idno": "1",
+      "phone_number": "1",
+      "email": "1",
+      "type": {
+        "id": "2",
+        "name": "Silver"
+      },
+      "address": "1",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "nguyen thi e",
+      "dob": "2023-08-03",
+      "gender": "1",
+      "idno": "1",
+      "phone_number": "0111111111",
+      "email": "1",
+      "type": {
+        "id": "4",
+        "name": "Platinum"
+      },
+      "address": "1"
+    },
+    {
+      "id": 11,
+      "name": "nguyen thi e",
+      "dob": "2023-08-05",
+      "gender": "1",
+      "idno": "2",
+      "phone_number": "1",
+      "email": "1",
+      "type": {
+        "id": "3",
+        "name": "Gold"
+      },
+      "address": "2"
+    },
+    {
+      "name": "1",
+      "dob": "2023-08-11",
+      "gender": 0,
+      "idno": "1",
+      "phone_number": "1",
+      "email": "1",
+      "type": {
+        "id": "3",
+        "name": "Gold"
+      },
+      "address": "1",
+      "id": 12
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "imgPath": "https://images.trvl-media.com/lodging/49000000/48870000/48869100/48869049/7eff3798.jpg?impolicy=resizecrop&rw=500&ra=fit",
+      "name": "NVT Room",
+      "area": 20,
+      "rental": 200000,
+      "maxPeople": 5,
+      "type": 1
+    },
+    {
+      "id": 2,
+      "imgPath": "https://images.trvl-media.com/lodging/49000000/48870000/48869100/48869049/7eff3798.jpg?impolicy=resizecrop&rw=500&ra=fit",
+      "name": "NVT Room",
+      "area": 20,
+      "rental": 200000,
+      "maxPeople": 5,
+      "type": 1
+    },
+    {
+      "id": 3,
+      "imgPath": "https://images.trvl-media.com/lodging/49000000/48870000/48869100/48869049/7eff3798.jpg?impolicy=resizecrop&rw=500&ra=fit",
+      "name": "NVT Room",
+      "area": 20,
+      "rental": 200000,
+      "maxPeople": 5,
+      "type": 1
+    },
+    {
+      "id": 4,
+      "imgPath": "https://images.trvl-media.com/lodging/49000000/48870000/48869100/48869049/7eff3798.jpg?impolicy=resizecrop&rw=500&ra=fit",
+      "name": "NVT Room",
+      "area": 20,
+      "rental": 200000,
+      "maxPeople": 5,
+      "type": 1
+    },
+    {
+      "name": "Phong sieu dep",
+      "imgPath": "https://aeros.vn/upload/images/menu_page/aeros-thiet-ke-phong-ngu-06.webp",
+      "area": 100,
+      "rental": 100000,
+      "maxPeople": 2,
+      "type": "4",
+      "id": 5
+    },
+    {
+      "name": "nguyen thi e",
+      "imgPath": "https://noithatmanhhe.vn/media/31772/thiet-ke-noi-that-phong-ngu-master-1.jpg",
+      "area": 200,
+      "rental": 1000000,
+      "maxPeople": 2,
+      "type": "4",
+      "id": 6
+    }
+  ]
+}

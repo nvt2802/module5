@@ -3,6 +3,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import './style_edit.css'
 
 export default function edit() {
+
+
+  
   return (
     <div className='d-flex justify-content-center'>
         
