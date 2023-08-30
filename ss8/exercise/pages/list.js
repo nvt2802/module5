@@ -1,6 +1,6 @@
 import React from 'react'
-
-export default function index({data}) {
+import axios from 'axios';
+export default function list({data}) {
   return (
     <div>
         <h1>Covid-19 information</h1>
@@ -33,7 +33,7 @@ export default function index({data}) {
 }
 export async function getStaticProps() {
     const result = await axios.get(`https://api.covidtracking.com/v1/us/daily.json`);
-    const covids = result.data;
+    const data = result.data;
     return {
         props: {
             data
